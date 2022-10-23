@@ -7,10 +7,6 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-lock "~> 3.17.1"
-
-set :application, 'redmine'
-set :repo_url, 'git@github.com:digitastuces/myapp.git'
 
 server 'galaxy.digitastuces.com', port: 22, user: 'deploy', roles: %w{app db web}
 
