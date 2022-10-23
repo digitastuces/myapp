@@ -10,6 +10,7 @@ set :repo_url, 'git@github.com:digitastuces/myapp.git'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/opt/my_app_name"
 
+set :root_saltstates_dir, '/srv/my_app_name/current'
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
