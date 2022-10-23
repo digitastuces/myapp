@@ -67,15 +67,15 @@ server 'galaxy.digitastuces.com', port: 22, user: 'deploy', roles: %w{app db web
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{deploy@galaxy.digitastuces.com}
-role :web, %w{deploy@galaxy.digitastuces.com}
-role :db,  %w{deploy@galaxy.digitastuces.com}
+# role :app, %w{deploy@galaxy.digitastuces.com}
+# role :web, %w{deploy@galaxy.digitastuces.com}
+# role :db,  %w{deploy@galaxy.digitastuces.com}
 
-set :stage, :production
-set :branch, 'production'
-set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
-set :deploy_to, "/home/deploy/#{fetch(:myproject)}"
-set :rails_env, :production
+# set :stage, :production
+# set :branch, 'production'
+# set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
+# set :deploy_to, "/home/deploy/#{fetch(:myproject)}"
+# set :rails_env, :production
 
 
 # Configuration
@@ -97,7 +97,7 @@ set :rails_env, :production
 # --------------
 set :ssh_options, {
  keys: %w(/home/deploy/.ssh/id_rsa),
- forward_agent: false,
+ forward_agent: true,
  # auth_methods: %w(password)
 }
 #
